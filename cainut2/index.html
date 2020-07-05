@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="icon" href="logo.png">
+	<title>Cái... nút (part 2)</title>
+	<style type="text/css">
+		.cvalue{
+			font-family: candara;
+			padding:3%;
+			font-size: 150%;
+			border-radius: 5%;
+			border:3px solid black;
+			color:black;
+			background-color: white;
+			cursor: pointer;
+			transition: 0.4s;
+		}
+		.box{
+			margin-top: 10%;
+		}
+		.content{
+			font-size: 200%;
+			font-family: candara;
+		}
+		.header{
+			margin-top: 5%;
+			font-size: 230%;
+			font-family: candara;
+		}
+		.footer{	
+			position: absolute;
+			bottom: 0px;
+		}
+		a{
+			font-family: segoe script;
+			font-size:110%;
+			color:black;
+		}
+	</style>
+</head>
+<body>
+	<div class="header" align="center">
+		Cái nút part 2
+	</div>
+	<div align="center" class="box">
+		<button onclick="ilucount();" class="cvalue" id="cvalue">Ấn vào tao đi</button>
+		<br/>
+		<br/>
+		<br/>
+		<div class="content"></div>
+	</div>
+	<div class="footer"><a href="https://www.facebook.com/minh.nguyenphu.77715">Credit: Nguyễn Phú Minh</a></div>
+	<script type="text/javascript" src="topbar.min.js"></script>
+	<script type="text/javascript">
+		topbar.show()
+		topbar.hide();
+
+		var a=1;
+		var b=document.querySelector(".cvalue");
+		var d=document.querySelector(".box");
+		var e=document.querySelector(".header");
+		function ilucount(){
+			a++;
+			if (a == 2){
+				b.innerHTML = "Ấn lần nữa đi"
+				d.style.marginLeft = Math.floor(Math.random() * window.innerWidth / 2 ) + "px";
+				d.style.marginTop = Math.floor(Math.random() * window.innerHeight / 2 ) + "px";
+				d.setAttribute("align","");
+				e.outerHTML = "";
+			}
+			if (a == 3){
+				b.innerHTML = "Ấn thêm phát nữa"
+				d.style.marginLeft = Math.floor(Math.random() * window.innerWidth / 2 ) + "px";
+				d.style.marginTop = Math.floor(Math.random() * window.innerHeight / 2 ) + "px";
+			} 
+			if (a == 4){
+				b.innerHTML = "Ấn đi, sắp rồi"
+				d.style.marginLeft = Math.floor(Math.random() * window.innerWidth / 2 ) + "px";
+				d.style.marginTop = Math.floor(Math.random() * window.innerHeight / 2 ) + "px";
+			} 
+			if (a == 5){
+				b.innerHTML = "Ấn lần cuối"
+				d.style.marginLeft = Math.floor(Math.random() * window.innerWidth / 2 ) + "px";
+				d.style.marginTop = Math.floor(Math.random() * window.innerHeight / 2 ) + "px";
+			} 
+			if (a == 6){
+				var c = document.querySelector(".content");
+				c.innerHTML = "Làm người yêu tao nhé <3"
+			}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Cái... nút ?</title>
+	<style type="text/css">
+		.content{
+			margin-top:10%;
+		}
+		.header{
+			font-family:candara;
+			font-size:260%;
+		}
+		button{
+			font-size:130%;
+			font-family:candara;
+			border:3px solid black;
+			color:black;
+			background:none;
+			transition: 0.5s;
+			cursor: pointer;
+			padding:3%;
+			border-radius: 5%;
+		}
+		button:hover{
+			color:white;
+			background-color:black;
+			transition: 0.5s;
+			cursor: pointer;
+			padding:3%;
+		}
+		.innercontent{
+			font-family:candara;
+			font-size:150%;
+		}
+		.footer{
+			position: fixed;
+			font-size: 100%;
+			font-family: segoe script;
+			left:0;
+			bottom:0;
+		}
+		a{
+			color:black;
+		}
+	</style>
+	<link rel="icon" href="logo.png">
+</head>
+<body>
+	<div class="content" align="center">
+		<div class="header">Đây là cái nút ...</div>
+		<br/>
+		<button onclick="anvaoday();">Đừng ấn vào bố mày</button>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<div class="innercontent"></div>	
+	</div>
+	<div class="footer"><a href="https://www.facebook.com/minh.nguyenphu.77715"><b>Credit: NPMdev</b></a></div>
+	<script type="text/javascript" src="topbar.min.js"></script>
+	<script type="text/javascript">
+		topbar.show();
+		topbar.hide();
+		function anvaoday(){
+			var a = document.querySelector(".innercontent");
+			var b = document.querySelector("button");
+			a.innerHTML = "Đã bảo ko ấn vào rồi cơ mà huhuhuhu. Mà thôi, làm ny tao là được rồi nè <3";
+			b.innerHTML = "Hỏng hóc các thứ";
+		}
+	</script>
+</body>
+</html>
