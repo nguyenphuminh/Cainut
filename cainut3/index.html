@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="icon" href="logo.png">
+	<title>Cái... nút Version 3</title>
+	<style type="text/css">
+		.content{
+			margin-top:15%;
+		}
+		.header{
+			font-size: 230%;
+			font-family: candara;
+		}
+		.result{
+			font-size: 150%;
+			font-family: candara;
+		}
+		.footer{	
+			position: absolute;
+			bottom: 0px;
+		}
+		a{
+			color:black;
+			font-family: segoe script;
+		}
+	</style>
+</head>
+<body>
+	<div class="content" align="center">
+		<div class="header">Gõ một thứ gì đó vào đây rồi ấn cái nút :)</div>
+		<br/>
+		<br/>
+		<input type="text" placeholder="OwO"><button onclick="presshere()" class="press">Cái nút</button>
+		<div class="result"></div>
+	</div>
+	<div class="footer"><a href="https://www.facebook.com/minh.nguyenphu.77715"><b>Credit: NPMdev</b></a></div>
+	<script type="text/javascript" src="topbar.min.js"></script>
+	<script type="text/javascript">
+		topbar.show();
+		topbar.hide();
+
+		var a = document.querySelector(".result");
+		function presshere(){
+			a.innerHTML = a.innerHTML + "<br/>" + "Tao yêu mày <3"
+		}
+	</script>
+</body>
+</html>

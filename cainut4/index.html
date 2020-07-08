@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="icon" href="logo.png">
+	<title>Cái... nút.. again</title>
+	<style type="text/css">
+		.footer{
+			position: absolute;
+			bottom: 0px;
+			left: 0px;
+		}
+		.content{
+			margin-top:10%;
+		}
+		.header{
+			font-size: 250%;
+			font-family:candara;
+		}
+		.quote{
+			font-size: 150%;
+			font-family:segoe ui;
+		}
+		button{
+			border:3px solid black;
+			background-color: white;
+			padding:2%;
+			font-family: candara;
+			font-size:130%;
+			cursor: pointer;
+			transition: 0.8s;
+			border-radius: 5%;
+			color:black;
+		}
+		button:hover{
+			color: white;
+			background-color: black
+		}
+	</style>
+</head>
+<body>
+	<div align="center" class="content">
+		<div class="header">Làm người yêu tao nhé</div>
+		<br/>
+		<div class="quote">Không trả lời là có nhé :))</div>
+		<br/>
+		<br/>
+		<button onclick="changevalue();">Có</button>
+	</div>
+	<div class="footer"><a href="https://www.facebook.com/minh.nguyenphu.77715">Credit: Nguyễn Phú Minh</a></div>
+	<script type="text/javascript" src="topbar.min.js"></script>
+	<script type="text/javascript">
+		topbar.show();
+		topbar.hide();
+
+		var a = document.querySelector(".header");
+		var b = 0;
+		function changevalue(){
+			b++;
+
+			if (b == 1){
+				a.innerHTML = "Làm vợ tao nhé"
+			}
+			if (b == 2){
+				a.innerHTML = "Sống với nhau trọn đời nhé"
+			}
+			if (b == 3){
+				a.innerHTML = "Chết cùng nhau nhé"
+			}
+			if (b == 4){
+				a.innerHTML = "Ui vui quá :))"
+			}
+		}
+	</script>
+</body>
+</html>
