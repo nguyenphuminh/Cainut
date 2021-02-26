@@ -22,13 +22,6 @@
 			padding:3%;
 			border-radius: 15px;
 		}
-		button:hover{
-			color:white;
-			background-color:black;
-			transition: 0.5s;
-			cursor: pointer;
-			padding:3%;
-		}
 		.innercontent{
 			font-family:candara;
 			font-size:150%;
@@ -48,9 +41,9 @@
 </head>
 <body>
 	<div class="content" align="center">
-		<div class="header">Đây là cái nút ...</div>
+		<div class="header">Ấn vào đây nếu cậu <span>không</span> yêu tớ</div>
 		<br/>
-		<button onclick="anvaoday();">Đừng ấn vào đây</button>
+		<button onclick="anvaoday();">Ấn</button>
 		<br/>
 		<br/>
 		<br/>
@@ -59,14 +52,22 @@
 	</div>
 	<div class="footer"><a href="https://www.facebook.com/minh.nguyenphu.77715"><b>Credit: NPMdev</b></a></div>
 	<script type="text/javascript" src="topbar.min.js"></script>
+	<script src="rotten.min.js"></script>
 	<script type="text/javascript">
+		rDev.mobile(()=>alert('Web này không hoạt dộng nhé tình iu <3 (*insert hôn)'));
 		topbar.show();
 		topbar.hide();
+		text=rt('span');
+		rt('button').hover(
+			()=>{
+				text.text('không');
+			},
+			()=>{
+				text.text('');
+			}
+		);
 		function anvaoday(){
-			var a = document.querySelector(".innercontent");
-			var b = document.querySelector("button");
-			a.innerHTML = "Đã bảo ko ấn vào rồi cơ mà huhuhuhu. Mà thôi, làm người yêu tớ là được rồi nè <3";
-			b.innerHTML = "Hỏng hóc các thứ";
+			rt('.innercontent').text('Hihi <3');
 		}
 	</script>
 </body>
